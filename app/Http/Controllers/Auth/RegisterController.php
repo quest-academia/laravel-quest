@@ -1,5 +1,5 @@
 <?php
-
+// RegisterControllerクラスの名前空間
 namespace App\Http\Controllers\Auth;
 
 use App\User;
@@ -19,7 +19,8 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
-
+    
+    // トレイト：関数がまとめて定義している
     use RegistersUsers;
 
     /**
@@ -27,13 +28,21 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    //  アクセス権限
+    //  public:どのクラスでもこの変数・関数にアクセスできる
+    //  protected:変数・関数にアクセス可能なのは、継承関係のあるクラスのみ
+    
+    // ゲスト以外の場合→ホームに戻る
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+     
+    //  処理がコントローラに渡る前に実行される内容
+    // この処理をする場合ログインしていない人だけに実行
     public function __construct()
     {
         $this->middleware('guest');
@@ -45,6 +54,8 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+     
+    //  行為の制限をするために使われている
     protected function validator(array $data)
     {
         return Validator::make($data, [

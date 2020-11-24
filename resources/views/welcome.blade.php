@@ -9,5 +9,16 @@
         </div>
 
     </div>
+    
+    <div class="text-right">
+
+        @if(Auth::check())
+            {{ Auth::user()->name }}
+        @endif
+
+    </div>
+    
+    <!--usersフォルダのusers.blade.phpに飛ぶと言う意味-->
+    @include('users.users', ['users'=>$users])
 
 @endsection

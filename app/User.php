@@ -26,4 +26,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    // なぜmoviesと複数形で書いているかというとUserはたくさんのmovieを所有しているから
+    public function movies()
+    {
+        return $this->hasMany(Movie::class);
+    }
 }

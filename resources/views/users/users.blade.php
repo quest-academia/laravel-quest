@@ -31,7 +31,12 @@
                        {{ $movie->comment }}
                 @endif
             </p>
+            
+                <!--これがフォローボタン・アンフォローボタンになる-->
+                @include('follow.follow_button',['user'=>$user])
+                
         </div>
+        
     </div>
 
     @endforeach

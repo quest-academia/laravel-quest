@@ -14,7 +14,7 @@ class AddChannelToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('channel')->defalt('マイチャンネル');
+            $table->string('channel')->default('マイチャンネル');
         });
     }
 

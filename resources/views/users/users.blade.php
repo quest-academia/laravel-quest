@@ -34,7 +34,7 @@
                     
                     <p>
                         @if(isset($movie->comment))
-                                {{ $movie->comment }}
+                        　  {{ $movie->comment }}
                         @endif
                     </p>
                     

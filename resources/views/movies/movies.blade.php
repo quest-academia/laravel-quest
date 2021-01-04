@@ -4,16 +4,15 @@
         
         @if($loop->iteration % 3 == 1 && $loop->iteration != 1)
         
-            </div>
-            
-            <div class="row text-center mt-3">
+            @php
+                echo '</div><div class="row text-center mt-3">';
+            @endphp    
                 
         @endif
         
             <div class="col-lg-4 mb-5">
                 
                 <div class="movie text-left d-inline-block">
-    
                     
                     <div>
                         @if($movie)
@@ -41,6 +40,6 @@
             
         @endforeach
         
-</div>
+ </div>
 
 {{ $movies->render('pagination::bootstrap-4') }}

@@ -33,7 +33,7 @@ class MoviesController extends Controller
             ]);
             
         $request->user()->movies()->create([
-            'url' => '$request->url',
+            'url' => $request->url,
             'comment' => $request->comment,            
             ]);
         

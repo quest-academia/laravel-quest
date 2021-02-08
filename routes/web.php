@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', 'UsersController@index');
 
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup');

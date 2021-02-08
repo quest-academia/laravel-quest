@@ -8,6 +8,7 @@
             <h1>YouTubeまとめ × SNS</h1>
         </div>
 
+
     </div>
     
     <div class="text-right">
@@ -19,5 +20,6 @@
     </div>
 
     @include('users.users', ['users'=>$users])
+
 
 @endsection
